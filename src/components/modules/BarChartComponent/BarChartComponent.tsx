@@ -1,8 +1,8 @@
 import { BarChart } from '@tremor/react';
 
 type BarChartComponentProps = {
-  mushroom: number;
-  bamboo: number;
+  mushroom?: number;
+  bamboo?: number;
   category: string;
 };
 
