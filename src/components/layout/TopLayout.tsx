@@ -3,17 +3,19 @@ import { Outlet } from 'react-router-dom';
 import { ErrorBoundaryComponent } from '@/utilities/ErrorBoundary';
 import { SWRConfigComponent } from '@/utilities/SwrConfig';
 
-import { HeaderComponent } from '../modules/HeaderComponent/HeaderComponent';
+import { Footer } from '../modules/Footer';
+import { Header } from '../modules/Header';
 
 export const TopLayout = () => {
   return (
     <>
-      <HeaderComponent />
+      <Header />
       <ErrorBoundaryComponent>
         <SWRConfigComponent>
           <Outlet />
         </SWRConfigComponent>
       </ErrorBoundaryComponent>
+      <Footer />
     </>
   );
 };
