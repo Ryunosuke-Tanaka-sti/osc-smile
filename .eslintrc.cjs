@@ -30,6 +30,7 @@ module.exports = {
   rules: {
     'no-unused-vars': 'off',
     'unused-imports/no-unused-imports': 'error',
+    'react-hooks/exhaustive-deps': 'off',
     'import/order': [
       'error',
       {

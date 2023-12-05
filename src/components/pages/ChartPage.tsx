@@ -1,5 +1,8 @@
 import { GiBamboo, GiGrassMushroom } from 'react-icons/gi';
 
+import { BarHorizontal } from '../modules/Spring/BarHorizontal';
+import { BarVertical } from '../modules/Spring/BarVertical';
+
 export const ChartPage = () => {
   // const { isLoadingTotalVote, totalVote } = useVoteData();
 
@@ -17,6 +20,8 @@ export const ChartPage = () => {
             タ〇ノコの里
           </li>
         </ul>
+        <BarHorizontal mushrooms={50} bamboo={50} />
+        <BarVertical mushrooms={50} bamboo={50} />
       </main>
     </>
   );
