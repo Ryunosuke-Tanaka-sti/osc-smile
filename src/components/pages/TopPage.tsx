@@ -12,7 +12,7 @@ export const TopPage = () => {
           負けられない戦いがここにある
         </div>
         <div className="flex w-full flex-col items-center gap-5">
-          <div className="flex items-center justify-center border-b-8 border-main py-4 text-4xl md:px-12">
+          <div className="flex items-center justify-center border-b-8 border-main py-4 text-4xl text-main md:px-12">
             あなたはどっち派？
           </div>
           <div className="flex w-full flex-col justify-between gap-3 md:flex-row">
