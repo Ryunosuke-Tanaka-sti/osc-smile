@@ -30,7 +30,7 @@ export const ChartPage = () => {
               style={props}
             >
               <ResultCard type="kinoko" count={totalVote.kinoko.diff} />
-              <span className="text-8xl">VS</span>
+              <span className="text-8xl text-main">VS</span>
               <ResultCard type="takenoko" count={totalVote.takenoko.diff} />
             </animated.div>
           </>
