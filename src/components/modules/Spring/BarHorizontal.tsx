@@ -26,30 +26,32 @@ export const BarHorizontal = (props: TripleGraphProps) => {
   const mushroomsAnimationProps = useSpring({
     from: { width: '0%' },
     to: async (next) => {
-      await next({ tension: 200, friction: 20 });
+      await next({ tension: 200, friction: 20, config: { duration: 200 } });
       for (let i = 0; i < 5; i++) {
         await next({
           width: `${Math.random() * 5 + 10}%`,
-          config: { tension: 200, friction: 20 },
+          config: { tension: 200, friction: 20, duration: 500 },
         });
       }
       await next({
         width: `${ratioMushrooms}%`,
+        config: { duration: 100 },
       });
     },
   });
   const bambooAnimationProps = useSpring({
     from: { width: '0%' },
     to: async (next) => {
-      await next({ tension: 200, friction: 20 });
+      await next({ tension: 200, friction: 20, config: { duration: 200 } });
       for (let i = 0; i < 5; i++) {
         await next({
           width: `${Math.random() * 5 + 10}%`,
-          config: { tension: 200, friction: 20 },
+          config: { tension: 200, friction: 20, duration: 500 },
         });
       }
       await next({
         width: `${ratioBamboo}%`,
+        config: { duration: 100 },
       });
     },
   });
