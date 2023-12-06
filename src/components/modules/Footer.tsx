@@ -8,18 +8,27 @@ export const Footer = () => {
           ふざけた展示ですけど企業ブースだったんです...
         </span>
         <ul className="flex grow flex-col gap-10 text-2xl hover:cursor-pointer md:w-full md:flex-row">
-          <li className="flex w-full items-center justify-center rounded border border-main py-4 transition-transform md:w-auto md:border-none md:p-0 md:hover:-translate-y-1">
+          <a
+            className="flex w-full items-center justify-center rounded border border-main py-4 transition-transform md:w-auto md:border-none md:p-0 md:hover:-translate-y-1"
+            href="https://tech-lab-engineer.sios.jp/?_gl=1%2Amw9erd%2A_ga%2AODgzNjAzMzIxLjE2ODQ0NTk2Nzg.%2A_ga_L7TL4612SQ%2AMTcwMTgyNjU4Ni4yNzIuMC4xNzAxODI2NTg2LjAuMC4w"
+            target="_blank"
+          >
             会社の紹介
-          </li>
-          <li className="flex w-full items-center justify-center rounded border border-main py-4 transition-transform md:w-auto md:border-none md:p-0 md:hover:-translate-y-1">
+          </a>
+          <a
+            className="flex w-full items-center justify-center rounded border border-main py-4 transition-transform md:w-auto md:border-none md:p-0 md:hover:-translate-y-1"
+            href="https://tech-lab.sios.jp/"
+            target="_blank"
+          >
             Tech Blog
-          </li>
-          <li className="hidden transition-transform  md:block md:hover:-translate-y-1">
-            カジュアル面談とかどうっすか？
-          </li>
-          <li className="flex w-full items-center justify-center rounded border border-main py-4  md:hidden">
+          </a>
+          <a
+            className="flex w-full items-center justify-center rounded border border-main py-4 transition-transform md:w-auto md:border-none md:p-0 md:hover:-translate-y-1"
+            href="https://mk.sios.jp/casualvisit_entry.html?_gl=1*fdpfc2*_ga*ODgzNjAzMzIxLjE2ODQ0NTk2Nzg.*_ga_L7TL4612SQ*MTcwMTgyNjU4Ni4yNzIuMS4xNzAxODI2NjAyLjAuMC4w"
+            target="_blank"
+          >
             カジュアル面談
-          </li>
+          </a>
         </ul>
       </div>
       <div>

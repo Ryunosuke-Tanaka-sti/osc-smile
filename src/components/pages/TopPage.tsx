@@ -1,10 +1,10 @@
+import { useNavigate } from 'react-router-dom';
+
 import { Button } from '../modules/Button';
 import { Card } from '../modules/Card';
 
 export const TopPage = () => {
-  // const { isLoadingTotalVote, totalVote } = useVoteData();
-
-  // if (isLoadingTotalVote && !totalVote) return <LoadingComponent />;
+  const navigate = useNavigate();
   return (
     <>
       <main className="my-10 flex h-full w-full max-w-5xl grow flex-col items-center justify-start gap-16 px-6 font-dela md:gap-16 md:px-0 md:py-28">
@@ -20,7 +20,7 @@ export const TopPage = () => {
             <Card type="takenoko" />
           </div>
         </div>
-        <Button text="会場の投票結果はこちら" onClick={() => null} />
+        <Button text="会場の投票結果はこちら" onClick={() => navigate('chart')} />
       </main>
     </>
   );

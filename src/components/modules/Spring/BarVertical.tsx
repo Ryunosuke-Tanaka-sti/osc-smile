@@ -1,5 +1,8 @@
 import { animated, useSpring } from '@react-spring/web';
 
+import Kinoko from '@assets/kinoko.png';
+import Takenoko from '@assets/takenoko.png';
+
 interface TripleGraphProps {
   mushrooms: number;
   bamboo: number;
@@ -53,9 +56,15 @@ export const BarVertical = (props: TripleGraphProps) => {
 
   return (
     <>
-      <div className="relative flex h-96 w-full flex-row items-end justify-around rounded-md p-5 shadow">
-        <animated.div className={'w-20 bg-kinoko'} style={mushroomsAnimationProps} />
-        <animated.div className={' w-20 bg-takenoko'} style={bambooAnimationProps} />
+      <div className="relative flex h-[600px] w-full flex-row items-end justify-around rounded-md p-5 shadow md:hidden">
+        <div className="flex h-full w-1/2 flex-col items-center justify-end">
+          <animated.div className={'w-1/2 bg-kinoko'} style={mushroomsAnimationProps} />
+          <img src={Kinoko} className="h-12 w-auto object-contain" alt="" />
+        </div>
+        <div className="flex h-full w-1/2 flex-col items-center justify-end">
+          <animated.div className={' w-1/2 bg-takenoko'} style={bambooAnimationProps} />
+          <img src={Takenoko} className="h-12 w-auto object-contain" alt="" />
+        </div>
       </div>
     </>
   );

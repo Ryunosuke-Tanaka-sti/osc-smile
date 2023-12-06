@@ -56,6 +56,11 @@ module.exports = {
             group: 'internal',
             position: 'after',
           },
+          {
+            pattern: '@assets/**',
+            group: 'sibling',
+            position: 'after',
+          },
         ],
         'newlines-between': 'always',
         alphabetize: {
