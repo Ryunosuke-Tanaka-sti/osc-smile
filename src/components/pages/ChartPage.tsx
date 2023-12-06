@@ -21,7 +21,7 @@ export const ChartPage = () => {
   return (
     <>
       <main className="flex h-full w-full max-w-6xl grow flex-col items-center justify-start gap-16 p-4 font-dela md:my-32 md:p-0">
-        {totalVote ? (
+        {totalVote && (
           <>
             <BarHorizontal mushrooms={totalVote.kinoko.diff} bamboo={totalVote.takenoko.diff} />
             <BarVertical mushrooms={totalVote.kinoko.diff} bamboo={totalVote.takenoko.diff} />
@@ -34,8 +34,6 @@ export const ChartPage = () => {
               <ResultCard type="takenoko" count={totalVote.takenoko.diff} />
             </animated.div>
           </>
-        ) : (
-          <></>
         )}
       </main>
     </>
