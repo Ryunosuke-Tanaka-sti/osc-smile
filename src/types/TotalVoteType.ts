@@ -4,6 +4,8 @@ export type TotalVoteType = {
 };
 
 type VoteType = {
+  count: number;
   happiness: number;
   anger: number;
+  diff: number;
 };
