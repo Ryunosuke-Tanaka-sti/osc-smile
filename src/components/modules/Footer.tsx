@@ -34,8 +34,11 @@ export const Footer = () => {
       <div>
         <img
           src={LogoImg}
-          className="h-auto w-full cursor-pointer object-contain transition-all md:h-auto md:w-80 md:hover:-translate-y-1"
+          className="h-auto w-full cursor-pointer object-contain transition-all hover:cursor-pointer md:h-auto md:w-80 md:hover:-translate-y-1"
           alt="サイオス！サイオステクノロジーエンジニアチャンネル"
+          onClick={() =>
+            window.open('https://www.youtube.com/channel/UCjIVEOLmZlBrgq7nrxVFuRw', '_blank')
+          }
         />
       </div>
     </footer>
