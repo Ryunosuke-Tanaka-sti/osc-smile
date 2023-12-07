@@ -20,9 +20,23 @@ export const ChartPage = () => {
 
   return (
     <>
-      <main className="flex h-full w-full max-w-6xl grow flex-col items-center justify-start gap-16 p-4 font-dela md:my-32 md:p-0">
+      <main className="my-12 flex h-full w-full max-w-6xl grow flex-col items-center justify-start gap-16 p-4 font-dela md:my-32 md:p-0">
         {totalVote && (
           <>
+            <animated.div
+              className="flex w-full flex-col items-center rounded py-6 text-main shadow md:p-6"
+              style={props}
+            >
+              <div className="flex items-center justify-center py-4 text-4xl md:px-12">
+                現在の参加人数
+              </div>
+              <div className="text-2xl">
+                <span className="text-6xl">
+                  {totalVote.kinoko.count + totalVote.takenoko.count}
+                </span>
+                名
+              </div>
+            </animated.div>
             <BarHorizontal mushrooms={totalVote.kinoko.diff} bamboo={totalVote.takenoko.diff} />
             <BarVertical mushrooms={totalVote.kinoko.diff} bamboo={totalVote.takenoko.diff} />
             <animated.div

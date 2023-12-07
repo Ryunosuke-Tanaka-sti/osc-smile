@@ -13,6 +13,7 @@ function calculatePercentages(
   b: number
 ): { ratioMushrooms: number; ratioBamboo: number } {
   const total = a + b;
+  if (total <= 0) return { ratioMushrooms: 0, ratioBamboo: 0 };
   const ratioMushrooms = (a / total) * 100;
   const ratioBamboo = (b / total) * 100;
   return { ratioMushrooms, ratioBamboo };
@@ -57,16 +58,16 @@ export const BarHorizontal = (props: TripleGraphProps) => {
   });
 
   return (
-    <div className="hidden w-full flex-row items-center gap-2 md:flex">
-      <div className="block rounded p-2 shadow">
+    <div className="hidden w-full flex-row items-center gap-2 py-4 shadow md:flex">
+      <div className="block rounded p-2">
         <img className="h-auto w-56 object-contain" src={Kinoko} alt="" />
       </div>
-      <div className="relative flex h-44 w-full flex-row justify-between rounded-md p-5 shadow">
+      <div className="relative flex h-44 w-full flex-row justify-between rounded-md shadow">
         <animated.div className={'bg-kinoko'} style={mushroomsAnimationProps} />
         <animated.div className={' bg-takenoko'} style={bambooAnimationProps} />
         <span className="absolute left-1/2 top-0 h-full w-2 -translate-x-1/2 bg-main" />
       </div>
-      <div className="block rounded p-2 shadow">
+      <div className="block rounded p-2">
         <img className="h-auto w-56 object-contain" src={Takenoko} alt="" />
       </div>
     </div>
