@@ -17,14 +17,16 @@ export const List = (props: ListProps) => {
 
   const heightStyle = useSpring({
     ref: ref1,
+    gap: isShow ? '8px' : '0px',
+    config: { duration: 100 },
   });
 
   const fadeStyles = useSpring({
     ref: ref2,
-    display: isShow ? 'block' : 'none',
+    maxHeight: isShow ? '1000px' : '0px',
   });
 
-  useChain([ref1, ref2], [0, 0]);
+  useChain([ref1, ref2], [0, 0.1]);
 
   return (
     <animated.div
@@ -36,7 +38,7 @@ export const List = (props: ListProps) => {
         {title}
         {isShow ? <FaCaretDown /> : <FaCaretUp />}
       </h2>
-      <animated.div className="h-1/2 w-full text-xl md:text-2xl" style={fadeStyles}>
+      <animated.div className="h-1/2 w-full overflow-hidden text-xl md:text-2xl" style={fadeStyles}>
         {content}
       </animated.div>
     </animated.div>
