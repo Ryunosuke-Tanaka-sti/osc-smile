@@ -1,5 +1,8 @@
 import { animated, useSpring } from '@react-spring/web';
 
+import { useVoteData } from '@/hooks/useVoteData';
+import { LoadingComponent } from '@/utilities/LoadingComponent';
+
 import { ResultCard } from '../modules/ResultCard';
 import { BarHorizontal } from '../modules/Spring/BarHorizontal';
 import { BarVertical } from '../modules/Spring/BarVertical';
@@ -13,23 +16,23 @@ export const ChartPage = () => {
   });
 
   // 本番環境
-  // const { isLoadingTotalVote, totalVote } = useVoteData();
-  // if (isLoadingTotalVote && !totalVote) return <LoadingComponent />;
+  const { isLoadingTotalVote, totalVote } = useVoteData();
+  if (isLoadingTotalVote && !totalVote) return <LoadingComponent />;
 
-  const totalVote = {
-    kinoko: {
-      count: 9,
-      happiness: 286,
-      anger: 66,
-      diff: 220,
-    },
-    takenoko: {
-      count: 27,
-      happiness: 921,
-      anger: 62,
-      diff: 859,
-    },
-  };
+  // const totalVote = {
+  //   kinoko: {
+  //     count: 9,
+  //     happiness: 286,
+  //     anger: 66,
+  //     diff: 220,
+  //   },
+  //   takenoko: {
+  //     count: 27,
+  //     happiness: 921,
+  //     anger: 62,
+  //     diff: 859,
+  //   },
+  // };
 
   return (
     <>
